@@ -185,7 +185,10 @@ return [
           'geonames:postal-code',
           'geonames:status',
           'geonames:update-geonames',
-        ]
+        ],
+        'backup' => [
+            'backup:run'
+        ],
     ]
 
 ];
