@@ -27,7 +27,7 @@ return [
     | Why tilda? It's selected for prevent route names correlation.
     |
     */
-    'prefix' => '~',
+    'prefix' => '',
 
     /*
     |--------------------------------------------------------------------------
