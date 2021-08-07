@@ -15,6 +15,9 @@ class GeonameInstall implements ShouldQueue, ArtisanDispatchable
 {
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
 
+    public $timeout = 86400;
+    public $failOnTimeout = false;
+
     /**
      * Create a new job instance.
      *
