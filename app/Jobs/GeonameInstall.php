@@ -9,7 +9,7 @@ use Illuminate\Foundation\Bus\Dispatchable;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Queue\SerializesModels;
 use Spatie\ArtisanDispatchable\Jobs\ArtisanDispatchable;
-use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Artisan;
 
 class GeonameInstall implements ShouldQueue, ArtisanDispatchable
 {
@@ -32,6 +32,6 @@ class GeonameInstall implements ShouldQueue, ArtisanDispatchable
      */
     public function handle()
     {
-        Log::debug('migrate');
+        Artisan::call('geonames:install');
     }
 }
