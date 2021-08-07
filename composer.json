@@ -17,7 +17,8 @@
         "laravel/framework": "^8.12",
         "laravel/octane": "^1.0",
         "laravel/tinker": "^2.5",
-        "michaeldrennen/geonames": "^8.0"
+        "michaeldrennen/geonames": "^8.0",
+        "spatie/laravel-artisan-dispatchable": "^1.2"
     },
     "require-dev": {
         "facade/ignition": "^2.5",
