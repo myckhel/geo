@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Controller;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,8 +15,13 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
+  // \DB::unprepared(file_get_contents(storage_path('app/password_resets.sql.zip')));
+  \DB::unprepared(file_get_contents(storage_path('app/password_resets.sql.gz')));
+  // \DB::unprepared(file_get_contents(storage_path('app/password_resets.sql')));
     return view('welcome');
 });
+
+Route::get('/reverse', [Controller::class, 'reverse']);
 
 //shared server clear cache
 Route::get('/clear-cache', fn () => Artisan::call('cache:clear'));
