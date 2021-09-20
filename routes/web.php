@@ -14,12 +14,7 @@ use App\Http\Controllers\Controller;
 |
 */
 
-Route::get('/', function () {
-  // \DB::unprepared(file_get_contents(storage_path('app/password_resets.sql.zip')));
-  \DB::unprepared(file_get_contents(storage_path('app/password_resets.sql.gz')));
-  // \DB::unprepared(file_get_contents(storage_path('app/password_resets.sql')));
-    return view('welcome');
-});
+Route::get('/', fn () => view('welcome'));
 
 Route::get('/reverse', [Controller::class, 'reverse']);
 
